@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-dotenv
+openai
+gtts
+langdetect
+passlib[bcrypt]
+python-jose
+requests
+pandas
+PyMuPDF
+sentence-transformers
+scikit-learn

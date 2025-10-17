@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mora-ai
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn mora_multilang_server:app --host 0.0.0.0 --port 10000
+    plan: free
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: JARVIS_JWT_SECRET
+        sync: false
