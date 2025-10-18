@@ -478,3 +478,10 @@ def add_memory(req: MemReq, user=Depends(get_current_user)):
     except Exception:
         DB.add_memory(user["id"], req.text)
     return {"ok": True}
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "🚀 MORA AI Backend is running successfully!"}
